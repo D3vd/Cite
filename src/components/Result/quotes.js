@@ -6,6 +6,16 @@ import NoQuotes from './noQuotes';
 import styles from './styles.module.css';
 
 export class Quotes extends Component {
+  formatQuote = line => {
+    let temp = line.split(':');
+
+    if (temp[1] === undefined) {
+      return temp;
+    }
+
+    return '<b>' + temp[0] + ':</b> ' + temp[1];
+  };
+
   render() {
     const quotes = this.props.quotes;
 
@@ -21,7 +31,12 @@ export class Quotes extends Component {
                   <div className={styles.quote_index}>{index + 1}</div>
                   <div className={styles.quote}>
                     {quote.map(line => (
-                      <div className={styles.line}>{line}</div>
+                      <div
+                        className={styles.line}
+                        dangerouslySetInnerHTML={{
+                          __html: this.formatQuote(line)
+                        }}
+                      ></div>
                     ))}
                   </div>
                 </Carousel.Item>
