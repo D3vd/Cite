@@ -14,7 +14,7 @@ export class Home extends Component {
   };
 
   onQueryChange = e => {
-    let query = e.target.value;
+    let query = e.target.value.toLowerCase();
 
     this.setState({
       query

@@ -21,13 +21,18 @@ export class App extends Component {
     this.setState({
       movie
     });
+
+    this.toggleHome();
   };
 
   render() {
     return (
       <div>
-        {this.state.home ? <Home selectMovie={this.selectMovie} /> : <Result />}
-        <button onClick={this.toggleHome}>Change</button>
+        {this.state.home ? (
+          <Home selectMovie={this.selectMovie} />
+        ) : (
+          <Result movie={this.state.movie} toggleHome={this.toggleHome} />
+        )}
       </div>
     );
   }
