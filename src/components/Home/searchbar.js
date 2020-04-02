@@ -13,6 +13,7 @@ export class Searchbar extends Component {
           className={styles.searchbar}
           placeholder="Start Typing for Suggestions"
           onChange={this.props.onQueryChange}
+          autocomplete="off"
         />
       </div>
     );

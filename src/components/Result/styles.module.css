@@ -1,3 +1,8 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .heading {
   font-size: 70px;
   text-align: center;
@@ -16,4 +21,26 @@
 .heading:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.banner_cnt {
+  display: flex;
+  margin: 20px 0;
+  padding: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 25px -14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 25px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 25px -14px rgba(0, 0, 0, 0.75);
+}
+
+.banner_poster {
+  height: 300px;
+}
+
+.banner_details {
+  margin: 30px 60px;
+}
+
+.banner_link {
+  margin: 10px 0;
 }
