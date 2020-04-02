@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import NoSuggestions from './noSuggestions';
+// import NoSuggestions from './noSuggestions';
 
 import styles from './styles.module.css';
 
@@ -10,12 +10,9 @@ export class Suggestions extends Component {
 
     return (
       <div className={styles.suggestions_cnt}>
-        <h1 className={styles.suggestions_heading}>
-          Suggestions ({suggestions.length})
-        </h1>
         <div className={styles.movies_cnt}>
           {suggestions.length === 0 ? (
-            <NoSuggestions />
+            ''
           ) : (
             <div className={styles.movies_cnt}>
               {suggestions.map(suggestion => (
