@@ -86,3 +86,42 @@
   margin: 20px;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 125px;
+  }
+
+  .searchbar {
+    width: 90%;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .suggestions_cnt {
+    margin-top: 30px;
+  }
+
+  .movie_cnt {
+    width: 150px;
+    height: 200px;
+    margin: 20px 30px;
+    padding: 30px;
+  }
+
+  .movies_cnt {
+    height: 380px;
+  }
+
+  .movie_title {
+    width: 150px;
+    margin: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+  }
+
+  .poster {
+    width: 150px;
+  }
+}
