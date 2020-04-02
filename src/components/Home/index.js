@@ -70,7 +70,10 @@ export class Home extends Component {
       <div className={styles.home_cnt}>
         <Header />
         <Searchbar onQueryChange={this.onQueryChange} />
-        <Suggestions suggestions={this.state.suggestions} />
+        <Suggestions
+          suggestions={this.state.suggestions}
+          selectMovie={this.props.selectMovie}
+        />
       </div>
     );
   }

@@ -19,7 +19,10 @@ export class Suggestions extends Component {
           ) : (
             <div className={styles.movies_cnt}>
               {suggestions.map(suggestion => (
-                <div className={styles.movie_cnt}>
+                <div
+                  className={styles.movie_cnt}
+                  onClick={() => this.props.selectMovie(suggestion)}
+                >
                   <div className={styles.poster_cnt}>
                     <img
                       src={suggestion.image}

@@ -6,7 +6,7 @@ import Result from './components/Result';
 export class App extends Component {
   state = {
     home: true,
-    imdb_id: ''
+    movie: ''
   };
 
   toggleHome = () => {
@@ -17,10 +17,16 @@ export class App extends Component {
     });
   };
 
+  selectMovie = movie => {
+    this.setState({
+      movie
+    });
+  };
+
   render() {
     return (
       <div>
-        {this.state.home ? <Home /> : <Result />}
+        {this.state.home ? <Home selectMovie={this.selectMovie} /> : <Result />}
         <button onClick={this.toggleHome}>Change</button>
       </div>
     );
