@@ -36,3 +36,50 @@
   border: none;
   outline: none;
 }
+
+.suggestions_cnt {
+  margin-top: 60px;
+  width: 100%;
+}
+.suggestions_heading {
+  text-align: center;
+}
+
+.movies_cnt {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  height: 500px;
+}
+
+.movies_cnt::-webkit-scrollbar {
+  display: none;
+}
+
+.movie_cnt {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 300px;
+  margin: 20px 50px;
+  padding: 30px;
+  transition: transform 0.2s;
+}
+
+.movie_cnt:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.poster {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie_title {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
