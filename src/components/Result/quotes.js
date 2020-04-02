@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 import NoQuotes from './noQuotes';
 
@@ -14,9 +15,18 @@ export class Quotes extends Component {
           <NoQuotes />
         ) : (
           <div>
-            {quotes.map(quote => (
-              <div className={styles.quote_cnt}></div>
-            ))}
+            <Carousel indicators={false} className={styles.carousel}>
+              {quotes.map((quote, index) => (
+                <Carousel.Item>
+                  <div className={styles.quote_index}>{index + 1}</div>
+                  <div className={styles.quote}>
+                    {quote.map(line => (
+                      <div className={styles.line}>{line}</div>
+                    ))}
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </div>
         )}
       </div>
