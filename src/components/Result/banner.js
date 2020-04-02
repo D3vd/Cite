@@ -30,6 +30,8 @@ export class Banner extends Component {
           </div>
           <div className={styles.banner_quotes}>
             <b>Quotes Found :</b>
+            {'  '}
+            {this.props.quotes_count}
           </div>
         </div>
       </div>

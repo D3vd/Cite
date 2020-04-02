@@ -12,7 +12,7 @@ import styles from './styles.module.css';
 
 export class Result extends Component {
   state = {
-    quotes: null,
+    quotes: [],
     loading: true,
     error: ''
   };
@@ -55,7 +55,10 @@ export class Result extends Component {
     return (
       <div className={styles.container}>
         <Header toggleHome={this.props.toggleHome} />
-        <Banner movie={this.props.movie} />
+        <Banner
+          movie={this.props.movie}
+          quotes_count={this.state.quotes.length}
+        />
         {this.state.loading ? (
           <Loading />
         ) : (
