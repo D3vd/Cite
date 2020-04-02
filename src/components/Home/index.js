@@ -42,23 +42,21 @@ export class Home extends Component {
   parseJSON = json => {
     let suggestions = [];
 
-    json.d.forEach(element => {
-      // Check if the suggestion is a movie / show
-      if ('y' in element) {
-        let image = '';
-
-        if (element.i[0] !== undefined) {
-          image = element.i[0];
+    if ('d' in json) {
+      json.d.forEach(element => {
+        // Check if the suggestion is a movie / show
+        if ('y' in element) {
+          if ('i' in element) {
+            suggestions.push({
+              name: element.l,
+              year: element.y,
+              id: element.id,
+              image: element.i
+            });
+          }
         }
-
-        suggestions.push({
-          name: element.l,
-          year: element.y,
-          id: element.id,
-          image
-        });
-      }
-    });
+      });
+    }
 
     this.setState({
       suggestions
