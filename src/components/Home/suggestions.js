@@ -5,6 +5,10 @@ import React, { Component } from 'react';
 import styles from './styles.module.css';
 
 export class Suggestions extends Component {
+  resizeImg = link => {
+    return link[0].replace('._V1_.jpg', '._V1._SX200_CR0,0,200,270_.jpg');
+  };
+
   render() {
     let suggestions = this.props.suggestions;
 
@@ -22,7 +26,7 @@ export class Suggestions extends Component {
                 >
                   <div className={styles.poster_cnt}>
                     <img
-                      src={suggestion.image}
+                      src={this.resizeImg(suggestion.image)}
                       alt={suggestion.name}
                       className={styles.poster}
                     />
